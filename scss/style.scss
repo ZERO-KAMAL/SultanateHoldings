@@ -1,0 +1,449 @@
+@import "var";
+
+body {
+  font-family: "Sen", sans-serif;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: $Bg;
+  transition: all ease 0.3s;
+}
+.arrow {
+  border-radius: 4px;
+  width: 35px;
+  height: 35px;
+  background-color: $Fc;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  line-height: 35px;
+  text-align: center;
+  i {
+    color: #1e1e1e;
+  }
+}
+#navBar {
+  ul {
+    li {
+      font-size: 16px;
+      padding-left: 15px;
+      a {
+        color: $Fc;
+        padding: 15px;
+        font-weight: 600;
+        line-height: 1.15;
+        position: relative;
+        &::before,
+        &::after {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: $Fc;
+          position: absolute;
+          left: 0;
+          transform: scaleX(0);
+          transition: 0.3s;
+        }
+        &::after {
+          bottom: 0%;
+          transform-origin: right;
+        }
+        &::before {
+          top: 0;
+          transform-origin: left;
+        }
+        &:hover {
+          &:after,
+          &::before {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+  .navbar-toggler {
+    border: 1px solid $Fc;
+    .navbar-toggler-icon {
+      background-color: $Fc;
+    }
+  }
+}
+#hero-section {
+  background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url(/Images/hero-bg1.jpg) repeat fixed 100%;
+  background-size: cover;
+  height: 100%;
+  .hero-content {
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+
+    .login-box {
+      margin-top: 8px;
+      height: auto;
+      background: $Bg;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+
+    .login-key {
+      height: 100px;
+      line-height: 100px;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .login-title {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 30px;
+      letter-spacing: 2px;
+      margin-top: 15px;
+      font-weight: bold;
+      color: $Fc;
+    }
+
+    .login-form {
+      margin-top: 25px;
+      text-align: left;
+    }
+
+    input[type="text"] {
+      background-color: #1a2226;
+      border: none;
+      border-bottom: 2px solid $Fc;
+      border-top: 0px;
+      border-radius: 0px;
+      font-weight: bold;
+      outline: 0;
+      margin-bottom: 20px;
+      padding-left: 0px;
+      color: #ecf0f5;
+    }
+
+    input[type="password"] {
+      background-color: #1a2226;
+      border: none;
+      border-bottom: 2px solid $Fc;
+      border-top: 0px;
+      border-radius: 0px;
+      font-weight: bold;
+      outline: 0;
+      padding-left: 0px;
+      margin-bottom: 20px;
+      color: #ecf0f5;
+    }
+
+    .form-group {
+      margin-bottom: 40px;
+      outline: 0px;
+    }
+
+    .form-control:focus {
+      border-color: inherit;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-bottom: 2px solid #0db8de;
+      outline: 0;
+      background-color: #1a2226;
+      color: #ecf0f5;
+    }
+
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 0;
+    }
+
+    label {
+      margin-bottom: 0px;
+    }
+
+    .form-control-label {
+      font-size: 10px;
+      color: #6c6c6c;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: $Bg;
+      right: 0px;
+    }
+
+    .login-btm {
+      float: left;
+      text-align: start;
+      justify-content: center;
+
+      a {
+        font-size: 10px;
+        color: #6c6c6c !important;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+      span {
+        margin-bottom: 20px;
+      }
+    }
+
+    .login-button {
+      padding-right: 0px;
+      text-align: center;
+      margin-bottom: 25px;
+      .btn-outline-primary {
+        border-color: $Fc;
+        color: $Fc;
+        border-radius: 0px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: 0.3s;
+        &:hover {
+          background-color: $Fc !important;
+          color: white;
+        }
+      }
+    }
+
+    .login-text {
+      text-align: left;
+      padding-left: 0px;
+      color: #a2a4a4;
+    }
+
+    .loginbttm {
+      padding: 0px;
+      align-items: center;
+      text-align: center;
+      .Forgot {
+        text-decoration: none;
+        padding-bottom: 20px;
+        font-size: 10px;
+        color: #6c6c6c;
+        font-weight: bold;
+        letter-spacing: 1px;
+        position: relative;
+        top: -20px;
+        &:hover {
+          color: $Fc;
+        }
+      }
+    }
+  }
+}
+#contact-us {
+  background-color: #1e1e1e;
+  padding: 50px;
+  margin: 80px 0px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  span {
+    font-size: 30px;
+    font-weight: 700;
+    color: #bcb4b4;
+  }
+  .color-black {
+    color: $Bc;
+  }
+  .color-gold {
+    color: #e5a44b !important;
+  }
+  a {
+    margin-top: 15px;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 25px;
+    font-size: 1rem;
+    color: white;
+    background-color: #e5a44b;
+  }
+}
+footer {
+  .widget-title {
+    position: relative;
+    left: 10px;
+    font-weight: 800;
+    font-size: 16px;
+    color: #e5a44b;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  li {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    margin-top: 25px;
+  }
+  .oceanwp-info-wrap {
+    padding-left: 15px;
+    margin-bottom: 10px;
+    .oceanwp-contact-title {
+      color: #e5a44b !important;
+      font-weight: bold;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+    .oceanwp-contact-text {
+      width: 100%;
+      line-height: 18px;
+      display: block;
+      color: #bcb4b4;
+    }
+    a {
+      width: 100%;
+      color: #bcb4b4;
+      cursor: pointer;
+    }
+  }
+}
+.hero-section-about {
+  background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url(/Images/hero-bg.jpg) repeat fixed 100%;
+  background-size: cover;
+  height: 100%;
+  .hero-content {
+    padding-top: 50px;
+
+    h2 {
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      color: #e5a44b;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 30px;
+      color: #bcb4b4;
+      text-align: start;
+      font-weight: 600;
+    }
+  }
+}
+.hero-section-contact {
+  background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url(/Images/hero-bg2.jpg) repeat fixed 100%;
+  background-size: cover;
+  height: 100%;
+  .hero-content {
+    .color-gold {
+      color: #e5a44b !important;
+    }
+    p {
+      a {
+        text-decoration: none;
+        border-bottom: 1px solid $Fc;
+        color: $Bc;
+        align-items: center;
+        i {
+          color: $Fc;
+        }
+      }
+    }
+  }
+}
+.hero-section-privacy {
+  background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url(/Images/hero-bg3.jpg) repeat fixed 100%;
+  background-size: cover;
+  height: 100%;
+  ul {
+    li {
+      font-size: 30px;
+      color: #bcb4b4;
+      font-weight: 600;
+    }
+  }
+}
+#approach {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin: 0px 0px;
+  text-align: center;
+  padding: 10vh 0px;
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #e5a44b;
+    text-transform: uppercase;
+  }
+  .underline {
+    height: 2px;
+    background-color: #e5a44b;
+    width: 100px;
+    margin: 30px auto;
+  }
+  p {
+    font-size: 30px;
+    color: #bcb4b4;
+    font-weight: 600;
+  }
+}
+#description {
+  padding: 20px;
+  margin: 5vh 0px;
+  p {
+    color: $Fc;
+    font-size: 22px;
+    font-weight: 400;
+  }
+}
+#investment {
+  padding: 20px;
+  margin: 80px 0px;
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: $Fc;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  .underline {
+    height: 2px;
+    background-color: $Fc;
+    width: 100px;
+    margin: 30px auto;
+  }
+  .Criteria-card {
+    height: 100%;
+    padding: 16px 8px 24px;
+    text-align: center !important;
+    border: 1px solid #e5a44b;
+    .CC-title {
+      color: #e5a44b;
+      margin-top: 16px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .CC-list {
+      ul {
+        margin-top: 6px;
+        li {
+          color: #bcb4b4;
+          margin-top: 4px;
+          text-align: start;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+.contact-btn {
+  transition: all 0.3s ease 0s;
+  a {
+    &:hover {
+      background: #3071a9;
+    }
+  }
+}
