@@ -305,6 +305,17 @@ footer {
       cursor: pointer;
     }
   }
+  #footer-bottom{
+   
+    #footer-bottom-inner {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      #copyright {
+        color: $Bc;
+      }
+    }
+  }
+  
 }
 .hero-section-about {
   background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
@@ -339,17 +350,6 @@ footer {
     .color-gold {
       color: #e5a44b !important;
     }
-    p {
-      a {
-        text-decoration: none;
-        border-bottom: 1px solid $Fc;
-        color: $Bc;
-        align-items: center;
-        i {
-          color: $Fc;
-        }
-      }
-    }
   }
 }
 .hero-section-privacy {
@@ -367,10 +367,9 @@ footer {
 }
 #approach {
   background-color: #1e1e1e;
-  padding: 20px;
-  margin: 0px 0px;
   text-align: center;
-  padding: 10vh 0px;
+  padding: 50px;
+  margin: 80px 0px;
   h2 {
     font-size: 20px;
     font-weight: 500;
@@ -435,6 +434,44 @@ footer {
           text-align: start;
           font-size: 16px;
         }
+      }
+    }
+  }
+}
+#industryfocus {
+  background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)),
+    url(../images/hero-bg.jpg) repeat fixed 100%;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+  padding: 10vh 0px;
+  h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #e5a44b;
+    text-transform: uppercase;
+  }
+  .underline {
+    height: 2px;
+    background-color: #e5a44b;
+    width: 100px;
+    margin: 30px auto;
+  }
+
+  ul {
+    padding: 20px;
+    list-style: none;
+
+    li {
+      margin-top: 30px;
+      a {
+        padding: 10px 25px;
+        border: 1px solid $Fc;
+        font-size: 30px;
+        color: #bcb4b4;
+        font-weight: 600;
+        margin-top: 20px;
+        text-decoration: none;
       }
     }
   }

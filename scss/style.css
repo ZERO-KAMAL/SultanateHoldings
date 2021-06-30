@@ -345,6 +345,15 @@ footer .oceanwp-info-wrap a {
   cursor: pointer;
 }
 
+footer #footer-bottom #footer-bottom-inner {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+footer #footer-bottom #footer-bottom-inner #copyright {
+  color: #BCB4B4;
+}
+
 .hero-section-about {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 9, 30, 0.5)), to(rgba(4, 9, 30, 0.5))), url(../images/hero-bg.jpg) repeat fixed 100%;
   background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(../images/hero-bg.jpg) repeat fixed 100%;
@@ -383,19 +392,6 @@ footer .oceanwp-info-wrap a {
   color: #e5a44b !important;
 }
 
-.hero-section-contact .hero-content p a {
-  text-decoration: none;
-  border-bottom: 1px solid #e5a44b;
-  color: #BCB4B4;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hero-section-contact .hero-content p a i {
-  color: #e5a44b;
-}
-
 .hero-section-privacy {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 9, 30, 0.5)), to(rgba(4, 9, 30, 0.5))), url(../images/hero-bg3.jpg) repeat fixed 100%;
   background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(../images/hero-bg3.jpg) repeat fixed 100%;
@@ -411,10 +407,9 @@ footer .oceanwp-info-wrap a {
 
 #approach {
   background-color: #1e1e1e;
-  padding: 20px;
-  margin: 0px 0px;
   text-align: center;
-  padding: 10vh 0px;
+  padding: 50px;
+  margin: 80px 0px;
 }
 
 #approach h2 {
@@ -492,6 +487,48 @@ footer .oceanwp-info-wrap a {
   margin-top: 4px;
   text-align: start;
   font-size: 16px;
+}
+
+#industryfocus {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(4, 9, 30, 0.5)), to(rgba(4, 9, 30, 0.5))), url(../images/hero-bg.jpg) repeat fixed 100%;
+  background: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(../images/hero-bg.jpg) repeat fixed 100%;
+  background-size: cover;
+  height: 100%;
+  text-align: center;
+  padding: 10vh 0px;
+}
+
+#industryfocus h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #e5a44b;
+  text-transform: uppercase;
+}
+
+#industryfocus .underline {
+  height: 2px;
+  background-color: #e5a44b;
+  width: 100px;
+  margin: 30px auto;
+}
+
+#industryfocus ul {
+  padding: 20px;
+  list-style: none;
+}
+
+#industryfocus ul li {
+  margin-top: 30px;
+}
+
+#industryfocus ul li a {
+  padding: 10px 25px;
+  border: 1px solid #e5a44b;
+  font-size: 30px;
+  color: #bcb4b4;
+  font-weight: 600;
+  margin-top: 20px;
+  text-decoration: none;
 }
 
 .contact-btn {
